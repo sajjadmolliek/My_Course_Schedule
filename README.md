@@ -12,16 +12,3 @@
 3. when i added remaining credit. I was used # const [remaining, setRemaining] = useState(0);
 4. when i added total price of course. I was used # const [price, setPrice] = useState(0);
 5. When i added the course name. I was used # const [selectCourse, setselectCourse] = useState([]);
-
-
-
-
-
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

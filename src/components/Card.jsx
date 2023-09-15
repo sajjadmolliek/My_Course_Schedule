@@ -5,15 +5,26 @@ import AddCourse from "./AddCourse";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-
+// All Courses Card Here 
 const Card = () => {
 
+    // Added UseState for fetch json file Here.
     const [course, setCourse] = useState([]);
+
+    // Added UseState for the course name.
     const [selectCourse, setselectCourse] = useState([]);
+
+    // Added UseState for total credit.
     const [counting, setCounting] = useState(0);
+
+    // Added UseState for Remaining total credit.
     const [remaining, setRemaining] = useState(0);
+
+    // Added UseState for total Price.
     const [price, setPrice] = useState(0);
 
+
+    // Added useEffect for fetch json file Here.
     useEffect(() => {
         fetch('/fakeData.json')
             .then(res => res.json())
@@ -26,6 +37,8 @@ const Card = () => {
         const isExect = selectCourse.find((item) => (item.id == btnSelectCourse.id));
         let count = btnSelectCourse.credit;
         let price = btnSelectCourse.price;
+
+        // Condition for Exist or not
         if (isExect) {
             toast.warn("The Course Already Added/Exist");
         }
@@ -39,7 +52,8 @@ const Card = () => {
                 setCounting(count);
                 setPrice(price);
                 setRemaining(remain);
-                console.log(counting, remaining);
+                
+                // Managed the State for sending data to AddCourse Component
                 setselectCourse([...selectCourse, btnSelectCourse]);
             }
             else {
@@ -54,6 +68,7 @@ const Card = () => {
         <>
             <div className="flex flex-col md:flex-row justify-center items-center md:items-start my-20">
                 <div className="grid grid-cols-1 md:grid-cols-3  w-4/5 md:w-3/5">
+                {/* Mapping For Load All The Course Card*/}
                     {
                         course.map((course, id) => (
                             <div key={id} className="card mb-10 card-compact w-[100%] md:w-[95%] bg-base-100 shadow-xl">
@@ -79,6 +94,7 @@ const Card = () => {
                     }
                 </div>
                 <div className="w-4/5 md:w-1/4">
+                    {/* Passing data for {Course_name, Total_Credit, Credit_Remaining, Total_Price} to AddCourse Component and Calling AddCourse component  here*/}
                     <AddCourse selectCourse={selectCourse} counting={counting} remaining={remaining} price={price}></AddCourse>
                     <ToastContainer />
                 </div>

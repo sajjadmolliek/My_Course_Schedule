@@ -15,7 +15,7 @@ const Card = () => {
     const [price, setPrice] = useState(0);
 
     useEffect(() => {
-        fetch('../../public/fakeData.json')
+        fetch('/fakeData.json')
             .then(res => res.json())
             .then(data => setCourse(data));
 
@@ -27,7 +27,7 @@ const Card = () => {
         let count = btnSelectCourse.credit;
         let price = btnSelectCourse.price;
         if (isExect) {
-            toast.warn("Exect");
+            toast.warn("The Course Already Added/Exist");
         }
         else {
             selectCourse.forEach((selectCourse) => {
@@ -43,7 +43,7 @@ const Card = () => {
                 setselectCourse([...selectCourse, btnSelectCourse]);
             }
             else {
-                toast.info("You Can't Add more")
+                toast.info("You Can't Add more Course")
             }
 
 

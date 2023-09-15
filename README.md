@@ -1,8 +1,7 @@
-# React + Vite
+# 3 Project features
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+1. We can Added Course But can't added One course at more time
+2. We can see our total taken credit and also the creadit we have Remain.
+3. We can't Take credit more than 20.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

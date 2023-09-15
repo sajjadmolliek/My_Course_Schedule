@@ -61,7 +61,7 @@ const Card = () => {
                                 <div className="card-body p-[8px]">
                                     <h2 className="font-bold text-lg">{course.course_name}</h2>
                                     <p className="opacity-50">{course.course_details}</p>
-                                    <div className="flex justify-between mb-5">
+                                    <div className="flex justify-between my-auto">
                                         <div className="">$ Price: {course.price}</div>
                                         <figure className="flex">
                                             <div><svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19" fill="none">
@@ -70,7 +70,7 @@ const Card = () => {
                                             <p> Credit: {course.credit}</p>
                                         </figure>
                                     </div>
-                                    <div className="card-actions justify-center">
+                                    <div className="card-actions justify-center mb-5 mt-4">
                                         <button onClick={() => clickButton(course)} className="px-20 py-2 rounded-lg btn-primary">Buy Now</button>
                                     </div>
                                 </div>
@@ -78,7 +78,7 @@ const Card = () => {
                         ))
                     }
                 </div>
-                <div className="w-4/5 md:w-1/5">
+                <div className="w-4/5 md:w-1/4">
                     <AddCourse selectCourse={selectCourse} counting={counting} remaining={remaining} price={price}></AddCourse>
                     <ToastContainer />
                 </div>

@@ -4,8 +4,8 @@
 const AddCourse = ({ selectCourse,counting,remaining,price }) => {
 
     return (
-        <div className="card card-compact w-[100%] bg-base-100 shadow-xl pl-6">
-            <h1 className="text-blue-600 text-base font-bold pt-4">Total Credit Hour remaining : {remaining} HR</h1>
+        <div className="card card-compact w-[100%] bg-base-100 shadow-xl p-6">
+            <h1 className="text-blue-600 text-lg font-bold pt-4">Total Credit Hour remaining : {remaining} hr</h1>
             <hr className="my-4" />
             <h1 className="text-2xl font-bold mb-5">Course Name</h1>
             {
@@ -17,7 +17,7 @@ const AddCourse = ({ selectCourse,counting,remaining,price }) => {
                 ))
             }
             <hr className="my-4" />
-            <h1 >Total Credit Hour : {counting}</h1>
+            <h1 >Total Credit Hour : {counting} hr</h1>
             <hr className="my-4" />
             <h1 className="pb-4">Total Price: {price} USD</h1>
         </div>
